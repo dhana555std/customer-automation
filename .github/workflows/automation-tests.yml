@@ -40,7 +40,7 @@ jobs:
               run: |
                   pwd
                   ls -l ./reports
-                  aws s3 cp --recursive ./reports ${{secrets.AWS_S3_REPORTS_BUCKET_ARN}/reports
+                  aws s3 cp --recursive ./reports ${{secrets.AWS_S3_REPORTS_BUCKET_ARN}}/reports
               env:
                   AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
                   AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
