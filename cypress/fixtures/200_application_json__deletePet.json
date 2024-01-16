@@ -1,0 +1,19 @@
+{
+    "headers": {
+        "accept": "application/json",
+        "header": {
+            "api_key": "special-key"
+        }
+    },
+    "responseStatusCode": "200",
+    "responseValue": {
+        "code": 201,
+        "type": "unknown",
+        "message": 1
+    },
+    "responseSchema": "",
+    "header": {},
+    "queryParam": {
+        "petId": 1234
+    }
+}
