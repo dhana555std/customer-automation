@@ -1,0 +1,83 @@
+{
+    "headers": {
+        "accept": "application/xml",
+        "header": {}
+    },
+    "responseStatusCode": "200",
+    "responseSchema": {
+        "type": "array",
+        "items": {
+            "required": ["name", "photoUrls"],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "category": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "xml": {
+                        "name": "Category"
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "example": "doggie"
+                },
+                "photoUrls": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "string",
+                        "xml": {
+                            "name": "photoUrl"
+                        }
+                    }
+                },
+                "tags": {
+                    "type": "array",
+                    "xml": {
+                        "wrapped": true
+                    },
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer",
+                                "format": "int64"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "xml": {
+                            "name": "Tag"
+                        }
+                    }
+                },
+                "status": {
+                    "type": "string",
+                    "description": "pet status in the store as expected.",
+                    "enum": ["available", "pending", "sold"]
+                }
+            },
+            "xml": {
+                "name": "Pet"
+            }
+        }
+    },
+    "queryParam": {
+        "tags": "tag1"
+    }
+}
