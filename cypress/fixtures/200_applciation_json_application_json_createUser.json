@@ -1,0 +1,23 @@
+{
+    "headers": {
+        "Content-Type": "application/json",
+        "accept": "applciation/json"
+    },
+    "payload": {
+        "id": 1,
+        "username": "shivasai123",
+        "firstName": "shivasai",
+        "lastName": "mandepally",
+        "email": "shivasai@gmail.com",
+        "password": "shiva1213",
+        "phone": 9542066149,
+        "userStatus": 0
+    },
+    "responseStatusCode": "200",
+    "responseValue": {
+        "code": 200,
+        "type": "unknown",
+        "message": 1
+    },
+    "responseSchema": ""
+}
