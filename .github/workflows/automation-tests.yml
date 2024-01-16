@@ -39,9 +39,9 @@ jobs:
               if: always()
               run: |
                   pwd
-                  ls -l /home/runner/work/cypress-umesh/cypress-umesh/reports
-                  aws s3 cp --recursive /home/runner/work/cypress-umesh/cypress-umesh/reports s3://testbucket-for-triggering/reports/
+                  ls -l ./reports
+                  aws s3 cp --recursive ./reports ${{secrets.AWS_S3_REPORTS_BUCKET_ARN}/reports
               env:
                   AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
                   AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-                  AWS_DEFAULT_REGION: 'ap-south-1'
+                  AWS_DEFAULT_REGION: ${{secrets.AWS_DEFAULT_REGION}}
