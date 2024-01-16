@@ -28,7 +28,7 @@
         }
     },
     "pathParam": {
-        "petId": 1234
+        "petId": 123456
     },
     "queryParam": {
         "username": "shiva"
