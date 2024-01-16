@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "npm install && npx cypress run --reporter mochawesome --reporter-options reportDir=results,overwrite=false,html=false,json=true",
-        "generate-merge-report-windows": "npx mochawesome-merge 'results/*.json' > mochawesome.json  && npx marge mochawesome.json -o reports/%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%_%TIME:~0,2%%TIME:~3,2%%TIME:~6,2% -t report -p test-report ",
-        "generate-merge-report-ubuntu": "npx mochawesome-merge 'results/*.json' > mochawesome.json && npx marge mochawesome.json -o reports/$(date +'%Y%m%d_%H%M%S') -t report -p test-report"
+        "generate-merge-report": "npx mochawesome-merge 'results/*.json' > mochawesome.json && npx marge mochawesome.json",
+        "generate-report": "npx mochawesome-merge 'results/*.json' > mochawesome.json",
+        "merge-report": "npx marge mochawesome.json"
     },
     "keywords": [],
     "author": "",
