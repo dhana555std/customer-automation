@@ -34,7 +34,7 @@
         "username": "shiva"
     },
     "cookie": {
-        "cookies": "cookieValue"
+        "cookies": "myCookie"
     },
     "header": {}
 }
