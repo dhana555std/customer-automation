@@ -1,0 +1,14 @@
+{
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "payload": {
+        "id": 1234,
+        "catrgory": {
+            "id": 1,
+            "name": "German shepard"
+        }
+    },
+    "responseStatusCode": "400",
+    "responseSchema": ""
+}

@@ -1,0 +1,19 @@
+{
+    "headers": {
+        "accept": "application/json",
+        "header": {}
+    },
+    "responseStatusCode": "200",
+    "responseValue": {
+        "code": 200,
+        "type": "unknown",
+        "message": "logged in user session:1684921725673"
+    },
+    "responseSchema": {
+        "type": "string"
+    },
+    "queryParam": {
+        "username": "shivasai123",
+        "password": "shiva1213"
+    }
+}
