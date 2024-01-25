@@ -1,6 +1,6 @@
 # customer-automation
 
-### prerequisites
+### Prerequisites
 * Download and install nodejs
 * Download and install visual studio
 
