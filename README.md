@@ -2,10 +2,10 @@
 
 ### Prerequisites
 * Download and install nodejs
-* Download and install visual studio
+* Download and install Visual Studio
 
-## Manual steps to create cypress project
-* Create a folder for project and open in VScode
+## Manual steps to create a cypress project
+* Create a folder for the project and open it in VScode
 * Open cmd/terminal then execute the below command 
    
    Create package.json file
@@ -16,12 +16,11 @@
 
    ```npm install cypress --save -dev```
 
-* To open cypress UI 
 
-  ```npx cypress open```
+### Below is the step-by-step video to generate a Cypress basic project
+  [Cypress project creation ](./cypress-project-creation.mp4) 
 
-* Browse the project
-* Selet e2e
-* Click on continue
-* Create spec.js
+* Need to maintain the cypress project structure in the repository before running the pipeline.
 
+* ```reporter-config.json ``` 
+(optional) for reference purpose.
