@@ -1,423 +1,357 @@
 {
-  "openapi": "3.0.1",
-  "info": {
-    "title": "Json placeholders",
-    "description": "This is a sample server for getting,posting and deleting the data.",
-    "version": "1.0.6"
-  },
-  "externalDocs": {
-    "description": "Find out more about jsonPlaceholders",
-    "url": "https://jsonplaceholder.typicode.com"
-  },
-  "servers": [
-    {
-      "description": "prod",
-      "url": "https://jsonplaceholder.typicode.com"
-    }
-  ],
-  "tags": [
-    {
-      "name": "Posts",
-      "description": "Everything about your posts"
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Json placeholders",
+        "description": "This is a sample server for getting,posting and deleting the data.",
+        "version": "1.0.6"
     },
-    {
-      "name": "comments",
-      "description": "Operations of comments"
-    }
-  ],
-  "paths": {
-    "/posts": {
-      "get": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "getAllPosts",
-        "summary": "fetches the data which is posted",
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "properties": {
-                    "userId": {
-                      "type": "integer",
-                      "format": "int32"
-                    },
-                    "id": {
-                      "type": "integer",
-                      "format": "int32"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "body": {
-                      "type": "string"
+    "externalDocs": {
+        "description": "Find out more about jsonPlaceholders",
+        "url": "https://jsonplaceholder.typicode.com"
+    },
+    "servers": [
+        {
+            "description": "prod",
+            "url": "https://jsonplaceholder.typicode.com"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Posts",
+            "description": "Everything about your posts"
+        },
+        {
+            "name": "comments",
+            "description": "Operations of comments"
+        }
+    ],
+    "paths": {
+        "/posts": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "operationId": "getAllPosts",
+                "summary": "fetches the data which is posted",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "properties": {
+                                        "userId": {
+                                            "type": "integer",
+                                            "format": "int32"
+                                        },
+                                        "id": {
+                                            "type": "integer",
+                                            "format": "int32"
+                                        },
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "body": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "example": {
+                                    "userId": 1,
+                                    "id": 101,
+                                    "title": "eson dieod",
+                                    "body": "things are working."
+                                }
+                            }
+                        }
                     }
-                  }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Posts"
+                ],
+                "operationId": "createNewPost",
+                "summary": "fetches the data which is posted",
+                "requestBody": {
+                    "description": "order placed for purchasing the pet",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Posts"
+                            },
+                            "examples": {
+                                "201": {
+                                    "summary": "positive",
+                                    "value": {
+                                        "userId": "1",
+                                        "title": "new",
+                                        "body": "this is a new post"
+                                    }
+                                }
+                            }
+                        }
+                    }
                 },
-                "example":{
-                  "userId":1,
-                  "id":101,
-                  "title":"eson dieod",
-                  "body": "things are working."
+                "responses": {
+                    "201": {
+                        "description": "created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "userId": {
+                                            "type": "string"
+                                        },
+                                        "id": {
+                                            "type": "integer",
+                                            "format": "int32"
+                                        },
+                                        "title": {
+                                            "type": "string"
+                                        },
+                                        "body": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-              }
             }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "createNewPost",
-        "summary": "fetches the data which is posted",
-        "requestBody": {
-          "description": "order placed for purchasing the pet",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Posts"
-              },
-              "examples": {
-                "201": {
-                  "summary": "positive",
-                  "value": {
-                    "userId": "1",
-                    "title": "new",
-                    "body": "this is a new post"
-                  }
-                }
-              }
-            }
-          }
         },
-        "responses": {
-          "201": {
-            "description": "created",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
+        "/posts/{postId}": {
+            "get": {
+                "tags": [
+                    "Posts"
+                ],
+                "operationId": "getPostsById",
+                "summary": "fetches the data of a perticular post.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "description": "The ID of the post",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": 55
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Posts"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Posts"
+                ],
+                "operationId": "patchUpdatingPost",
+                "summary": "Updates a perticular property of a post.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "description": "The ID of the post",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": 1
+                    }
+                ],
+                "requestBody": {
+                    "description": "order placed for purchasing the pet",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Posts"
+                            },
+                            "examples": {
+                                "200": {
+                                    "summary": "positive",
+                                    "value": {
+                                        "body": "Updated only body."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "post succesfully updated.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Posts"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Posts"
+                ],
+                "operationId": "deletePost",
+                "summary": "Deletes a post by using post id.",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "description": "The ID of the post",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "deleted succesfully.",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/posts/{postId}/comments": {
+            "get": {
+                "tags": [
+                    "Posts",
+                    "comments"
+                ],
+                "operationId": "getCommentsForPost",
+                "summary": "fetches the comments for the specific post",
+                "parameters": [
+                    {
+                        "name": "postId",
+                        "in": "path",
+                        "description": "The ID of the post",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/comments"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/comments": {
+            "get": {
+                "tags": [
+                    "comments"
+                ],
+                "operationId": "getAllcomments",
+                "summary": "Get all the comments",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/comments"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Posts": {
+                "type": "object",
+                "properties": {
                     "userId": {
-                      "type": "string"
+                        "type": "integer",
+                        "format": "int32"
                     },
                     "id": {
-                      "type": "integer",
-                      "format": "int32"
+                        "type": "integer",
+                        "format": "int32"
                     },
                     "title": {
-                      "type": "string"
+                        "type": "string"
                     },
                     "body": {
-                      "type": "string"
+                        "type": "string"
                     }
-                  }
                 }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/posts/{postId}": {
-      "get": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "getPostsById",
-        "summary": "fetches the data of a perticular post.",
-        "parameters": [
-          {
-            "name": "postId",
-            "in": "path",
-            "description": "The ID of the post",
-            "required": true,
-            "schema": {
-              "type": "integer"
             },
-            "example": 55
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Posts"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "updatePost",
-        "summary": "Updates the post.",
-        "parameters": [
-          {
-            "name": "postId",
-            "in": "path",
-            "description": "The ID of the post",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 1
-          }
-        ],
-        "requestBody": {
-          "description": "order placed for purchasing the pet",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Posts"
-              },
-              "examples": {
-                "200": {
-                  "summary": "positive",
-                  "value": {
-                    "userId": "1",
-                    "title": "updatePost",
-                    "body": "This is post is updated."
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "post succesfully updated.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "userId": {
-                      "type": "string"
+            "comments": {
+                "type": "array",
+                "properties": {
+                    "postId": {
+                        "type": "integer",
+                        "format": "int32"
                     },
                     "id": {
-                      "type": "integer",
-                      "format": "int32"
+                        "type": "integer",
+                        "format": "int32"
                     },
-                    "title": {
-                      "type": "string"
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
                     },
                     "body": {
-                      "type": "string"
+                        "type": "string"
                     }
-                  }
                 }
-              }
             }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "patchUpdatingPost",
-        "summary": "Updates a perticular property of a post.",
-        "parameters": [
-          {
-            "name": "postId",
-            "in": "path",
-            "description": "The ID of the post",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 1
-          }
-        ],
-        "requestBody": {
-          "description": "order placed for purchasing the pet",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Posts"
-              },
-              "examples": {
-                "200": {
-                  "summary": "positive",
-                  "value": {
-                    "body": "Updated only body."
-                  }
-                }
-              }
-            }
-          }
         },
-        "responses": {
-          "200": {
-            "description": "post succesfully updated.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Posts"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "deletePost",
-        "summary": "Deletes a post by using post id.",
-        "parameters": [
-          {
-            "name": "postId",
-            "in": "path",
-            "description": "The ID of the post",
-            "required": true,
-            "schema": {
-              "type": "integer"
+        "securitySchemes": {
+            "api_key": {
+                "type": "apiKey",
+                "name": "api_key",
+                "in": "header"
             },
-            "example": 1
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "deleted succesfully.",
-            "content": {
-              "application/json": {
-                "example": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/posts/{postId}/comments": {
-      "get": {
-        "tags": [
-          "Posts",
-          "comments"
-        ],
-        "operationId": "getCommentsForPost",
-        "summary": "fetches the comments for the specific post",
-        "parameters": [
-          {
-            "name": "postId",
-            "in": "path",
-            "description": "The ID of the post",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 1
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/comments"
+            "petstore_auth": {
+                "type": "oauth2",
+                "flows": {
+                    "implicit": {
+                        "authorizationUrl": "https://petstore.swagger.io/oauth/authorize",
+                        "scopes": {
+                            "read:pets": "read your pets",
+                            "write:pets": "modify pets in your account"
+                        }
+                    }
                 }
-              }
             }
-          }
         }
-      }
-    },
-    "/comments": {
-      "get": {
-        "tags": [
-          "comments"
-        ],
-        "operationId": "getAllcomments",
-        "summary": "Get all the comments",
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/comments"
-                }
-              }
-            }
-          }
-        }
-      }
     }
-  },
-  "components": {
-    "schemas": {
-      "Posts": {
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string"
-          },
-          "body": {
-            "type": "string"
-          }
-        }
-      },
-      "comments": {
-        "type": "array",
-        "properties": {
-          "postId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "body": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "securitySchemes": {
-      "api_key": {
-        "type": "apiKey",
-        "name": "api_key",
-        "in": "header"
-      },
-      "petstore_auth": {
-        "type": "oauth2",
-        "flows": {
-          "implicit": {
-            "authorizationUrl": "https://petstore.swagger.io/oauth/authorize",
-            "scopes": {
-              "read:pets": "read your pets",
-              "write:pets": "modify pets in your account"
-            }
-          }
-        }
-      }
-    }
-  }
 }
