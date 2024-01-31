@@ -26,7 +26,7 @@
 
 
 ### Below is the step-by-step video to generate a Cypress basic project
-  [Cypress project creation ](cypress-project-creation.mp4) 
+  [Cypress project creation ](https://drive.google.com/file/d/1ChouVFc5ZWvGFfkIcNOGRzZIN4buIEQx/view?usp=sharing) 
 
 * Need to maintain the cypress project structure in the repository before running the pipeline.
 
