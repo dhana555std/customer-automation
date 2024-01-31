@@ -1,0 +1,21 @@
+{
+    "headers": {
+        "accept": "application/json"
+    },
+    "responseStatusCode": "200",
+    "responseSchema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
