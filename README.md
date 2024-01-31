@@ -1,10 +1,18 @@
 # customer-automation
 
-### Prerequisites
+## Prerequisites
 * Download and install nodejs
 * Download and install Visual Studio
+* Store all essential code generator variables as repository secrets for secure access.
 
-## Manual steps to create a cypress project
+| variables | Description |
+| --- | --- |
+|AWS_S3_REPORTS_BUCKET_ARN| URL OF S3 bucket|
+|AWS_ACCESS_KEY_ID| AWS access key ID|
+|AWS_SECRET_ACCESS_KEY| AWS secret access key|
+|AWS_DEFAULT_REGION|AWS default region|
+
+### Manual steps to create a cypress project
 * Create a folder for the project and open it in VScode
 * Open cmd/terminal then execute the below command 
    
@@ -18,7 +26,7 @@
 
 
 ### Below is the step-by-step video to generate a Cypress basic project
-  [Cypress project creation ](./cypress-project-creation.mp4) 
+  [Cypress project creation ](cypress-project-creation.mp4) 
 
 * Need to maintain the cypress project structure in the repository before running the pipeline.
 
