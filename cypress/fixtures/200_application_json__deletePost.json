@@ -1,0 +1,11 @@
+{
+    "headers": {
+        "accept": "application/json"
+    },
+    "responseStatusCode": "200",
+    "responseValue": {},
+    "responseSchema": "",
+    "pathParam": {
+        "postId": 1
+    }
+}
