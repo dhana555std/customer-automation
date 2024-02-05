@@ -1,0 +1,15 @@
+{
+    "headers": {
+        "accept": "application/json"
+    },
+    "responseStatusCode": "200",
+    "responseValue": {
+        "code": 200,
+        "type": "unknown",
+        "message": 1
+    },
+    "responseSchema": "",
+    "pathParam": {
+        "orderId": 3
+    }
+}
