@@ -28,9 +28,6 @@
 
 
 ### Below is the step-by-step video to generate a Cypress basic project
-https://github.com/dhana555std/customer-automation/assets/121165761/76481290-5ffb-4296-837a-0bbf94edbc17
-
-
 * Create the Cypress project and maintain its structure in the repository before running the pipeline.
 
 * ```reporter-config.json ``` 
