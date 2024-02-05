@@ -1,0 +1,8 @@
+{
+    "headers": {},
+    "responseStatusCode": "404",
+    "responseSchema": "",
+    "pathParam": {
+        "petId": 1234
+    }
+}
