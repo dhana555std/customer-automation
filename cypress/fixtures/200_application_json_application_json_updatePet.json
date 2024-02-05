@@ -1,0 +1,36 @@
+{
+    "headers": {
+        "Content-Type": "application/json",
+        "accept": "application/json"
+    },
+    "payload": {
+        "id": 1234,
+        "catrgory": {
+            "id": 1,
+            "name": "BullDog"
+        },
+        "name": "Bruno",
+        "photoUrls": ["https://germanshepard/burno.jpg"],
+        "tags": [
+            {
+                "id": 1,
+                "name": "Tommy"
+            }
+        ],
+        "status": "available"
+    },
+    "responseStatusCode": "200",
+    "responseValue": {
+        "id": 1,
+        "name": "Bruno",
+        "photoUrls": ["https://germanshepard/burno.jpg"],
+        "tags": [
+            {
+                "id": 1,
+                "name": "Tommy"
+            }
+        ],
+        "status": "available"
+    },
+    "responseSchema": ""
+}
