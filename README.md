@@ -4,6 +4,7 @@
 * Download and install nodejs
 * Download and install Visual Studio
 * Store all essential code generator variables as repository secrets for secure access.
+* Cypress basic structure and report folder.
 
 | variables | Description |
 | --- | --- |
