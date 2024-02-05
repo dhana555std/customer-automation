@@ -25,7 +25,7 @@ jobs:
             - name: Generate report for cypress-
               if: ${{ ! cancelled() }}
               run: |
-                  npm run generate-merge-report-ubuntu
+                  npm run generate-merge-report
 
             - name: Install aws-cli
               id: install-aws
