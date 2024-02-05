@@ -1,0 +1,36 @@
+{
+    "headers": {
+        "Content-Type": "multipart/form-data",
+        "accept": "application/json",
+        "cookies": "cookieValue",
+        "header": "cG9zdG1hbjpwYXNzd29yZA=="
+    },
+    "payload": "file",
+    "responseStatusCode": "200",
+    "responseValue": {
+        "code": 200,
+        "type": "unknown",
+        "message": "uploaded succsfully"
+    },
+    "responseSchema": {
+        "type": "object",
+        "properties": {
+            "code": {
+                "type": "integer",
+                "format": "int32"
+            },
+            "type": {
+                "type": "string"
+            },
+            "message": {
+                "type": "string"
+            }
+        }
+    },
+    "pathParam": {
+        "petId": 1234
+    },
+    "queryParam": {
+        "username": "shiva"
+    }
+}
