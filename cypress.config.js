@@ -1,14 +1,19 @@
-const { defineConfig } = require("cypress");
-
-module.exports = defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+import { defineConfig } from 'cypress';
+export default defineConfig({
+    e2e: {
+        setupNodeEvents(on, config) {
+            on('task', {
+                log(message) {
+                    console.log(message);
+                    return null;
+                },
+            });
+        },
+        specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx,features}',
+        supportFile: false,
+        screenshotOnRunFailure: false,
+        env: {
+            CYPRESS_BASE_URL: 'https://petstore.swagger.io/v2',
+        },
     },
-    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,features}",
-    reporter: "mochawesome",
-    reporterOptions: {
-    configFile: "reporter-config.json"
-    },
-  },
 });

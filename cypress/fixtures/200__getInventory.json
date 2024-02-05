@@ -1,0 +1,19 @@
+{
+    "headers": {
+        "accept": "application/json",
+        "api_key": ""
+    },
+    "responseStatusCode": "200",
+    "responseValue": {
+        "additionalProp1": 1,
+        "additionalProp2": 2,
+        "additionalProp3": 3
+    },
+    "responseSchema": {
+        "type": "object",
+        "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}
