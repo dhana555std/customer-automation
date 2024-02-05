@@ -1,0 +1,31 @@
+{
+    "headers": {
+        "accept": "application/json"
+    },
+    "responseStatusCode": "200",
+    "responseValue": {
+        "userId": 1,
+        "id": 101,
+        "title": "eson dieod",
+        "body": "things are working."
+    },
+    "responseSchema": {
+        "type": "array",
+        "properties": {
+            "userId": {
+                "type": "integer",
+                "format": "int32"
+            },
+            "id": {
+                "type": "integer",
+                "format": "int32"
+            },
+            "title": {
+                "type": "string"
+            },
+            "body": {
+                "type": "string"
+            }
+        }
+    }
+}

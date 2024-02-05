@@ -1,1 +1,129 @@
-.header{position:sticky!important;top:0;z-index:9}.headerTitle{font-size:18px}.header-logo img{height:30px}.accion-logo img,.footer-logo{height:40px}.single-card{width:33%;padding:12px;transition:all .3s ease-in-out}.single-card:hover{transform:scale(1.03)}.infoCard{box-shadow:2px 3px 13px 3px rgba(0,0,0,.56)!important}.infoCard.passed{background-color:#65b862!important}.infoCard.failed{background-color:#e25151!important}.infoCard.skipped{background-color:#989898!important}.infoCard.pending{background-color:#da763d!important}.cardTitle{color:#fff;font-weight:700!important;background-color:#0000004d;padding:12px!important;margin-bottom:20px}.cardText{line-height:1.2!important;color:#fff!important}.cardTextDesc,.cardTextTitle{font-family:monospace}.dialogCardText{color:#000!important}.text-shadow{text-shadow:2px 1px 2px #000}@media (max-width:991px){.single-card{width:50%}}@media (max-width:767px){.single-card{width:80%}}@media (max-width:600px){.single-card{width:100%}}@keyframes onCardHover{0%{transform:scale(1)}to{transform:scale(1.03)}}.filterDropdownsCard,.pieChartCard{height:100%;padding:5px}.filterActionBtns{margin:5px;display:flex}.v-chip{margin:1px 1px!important;padding:10px!important}.cards-wrapper{word-wrap:break-word;justify-content:space-between}@media (max-width:767px){.cards-wrapper{justify-content:center}}@media (max-width:600px){.cards-wrapper{justify-content:center}}html{color:#455a64}*{text-transform:none!important;font-family:Roboto,sans-serif}#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.v-main{background-color:#fff!important;padding:20px!important;height:100%}.col{padding:8px!important}
+.header {
+    position: sticky !important;
+    top: 0;
+    z-index: 9;
+}
+.headerTitle {
+    font-size: 18px;
+}
+.header-logo img {
+    height: 30px;
+}
+.accion-logo img,
+.footer-logo {
+    height: 40px;
+}
+.single-card {
+    width: 33%;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+.single-card:hover {
+    transform: scale(1.03);
+}
+.infoCard {
+    box-shadow: 2px 3px 13px 3px rgba(0, 0, 0, 0.56) !important;
+}
+.infoCard.passed {
+    background-color: #65b862 !important;
+}
+.infoCard.failed {
+    background-color: #e25151 !important;
+}
+.infoCard.skipped {
+    background-color: #989898 !important;
+}
+.infoCard.pending {
+    background-color: #da763d !important;
+}
+.cardTitle {
+    color: #fff;
+    font-weight: 700 !important;
+    background-color: #0000004d;
+    padding: 12px !important;
+    margin-bottom: 20px;
+}
+.cardText {
+    line-height: 1.2 !important;
+    color: #fff !important;
+}
+.cardTextDesc,
+.cardTextTitle {
+    font-family: monospace;
+}
+.dialogCardText {
+    color: #000 !important;
+}
+.text-shadow {
+    text-shadow: 2px 1px 2px #000;
+}
+@media (max-width: 991px) {
+    .single-card {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .single-card {
+        width: 80%;
+    }
+}
+@media (max-width: 600px) {
+    .single-card {
+        width: 100%;
+    }
+}
+@keyframes onCardHover {
+    0% {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+.filterDropdownsCard,
+.pieChartCard {
+    height: 100%;
+    padding: 5px;
+}
+.filterActionBtns {
+    margin: 5px;
+    display: flex;
+}
+.v-chip {
+    margin: 1px 1px !important;
+    padding: 10px !important;
+}
+.cards-wrapper {
+    word-wrap: break-word;
+    justify-content: space-between;
+}
+@media (max-width: 767px) {
+    .cards-wrapper {
+        justify-content: center;
+    }
+}
+@media (max-width: 600px) {
+    .cards-wrapper {
+        justify-content: center;
+    }
+}
+html {
+    color: #455a64;
+}
+* {
+    text-transform: none !important;
+    font-family: Roboto, sans-serif;
+}
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.v-main {
+    background-color: #fff !important;
+    padding: 20px !important;
+    height: 100%;
+}
+.col {
+    padding: 8px !important;
+}
