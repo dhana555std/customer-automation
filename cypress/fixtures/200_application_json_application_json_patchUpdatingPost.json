@@ -1,0 +1,32 @@
+{
+    "headers": {
+        "Content-Type": "application/json",
+        "accept": "application/json"
+    },
+    "payload": {
+        "body": "Updated only body."
+    },
+    "responseStatusCode": "200",
+    "responseSchema": {
+        "type": "object",
+        "properties": {
+            "userId": {
+                "type": "integer",
+                "format": "int32"
+            },
+            "id": {
+                "type": "integer",
+                "format": "int32"
+            },
+            "title": {
+                "type": "string"
+            },
+            "body": {
+                "type": "string"
+            }
+        }
+    },
+    "pathParam": {
+        "postId": 1
+    }
+}
