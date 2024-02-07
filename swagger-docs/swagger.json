@@ -152,6 +152,9 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -303,8 +306,7 @@
     "/posts/{postId}/comments": {
       "get": {
         "tags": [
-          "Posts",
-          "comments"
+          "Posts"
         ],
         "operationId": "getCommentsForPost",
         "summary": "fetches the comments for the specific post",
@@ -320,6 +322,27 @@
             "example": 1
           }
         ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/comments"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/comments": {
+      "get": {
+        "tags": [
+          "comments"
+        ],
+        "operationId": "getAllcomments",
+        "summary": "Get all the comments",
         "responses": {
           "200": {
             "description": "successful operation",
