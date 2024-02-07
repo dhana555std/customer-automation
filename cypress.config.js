@@ -13,7 +13,8 @@ export default defineConfig({
         supportFile: false,
         screenshotOnRunFailure: false,
         env: {
-            CYPRESS_BASE_URL: 'https://jsonplaceholder.typicode.com',
+            CYPRESS_BASE_URL: 'https://petstore.swagger.io/v2',
+            fileuploadContentTypes: 'PLACEHOLDER_CONTENT_TYPES',
         },
     },
 });

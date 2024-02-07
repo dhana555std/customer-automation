@@ -2,3 +2,5 @@
 results
 mochawesome.json
 outputs
+node_modules
+mochawesome.js
