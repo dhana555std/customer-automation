@@ -5,23 +5,26 @@
     "responseStatusCode": "200",
     "responseSchema": {
         "type": "array",
-        "properties": {
-            "postId": {
-                "type": "integer",
-                "format": "int32"
-            },
-            "id": {
-                "type": "integer",
-                "format": "int32"
-            },
-            "name": {
-                "type": "string"
-            },
-            "email": {
-                "type": "string"
-            },
-            "body": {
-                "type": "string"
+        "items": {
+            "type": "object",
+            "properties": {
+                "postId": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "string"
+                }
             }
         }
     },
