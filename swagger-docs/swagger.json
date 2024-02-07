@@ -152,6 +152,9 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -221,55 +224,6 @@
           }
         }
       },
-      "patch": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "patchUpdatingPost",
-        "summary": "Updates a perticular property of a post.",
-        "parameters": [
-          {
-            "name": "postId",
-            "in": "path",
-            "description": "The ID of the post",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 1
-          }
-        ],
-        "requestBody": {
-          "description": "order placed for purchasing the pet",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Posts"
-              },
-              "examples": {
-                "200": {
-                  "summary": "positive",
-                  "value": {
-                    "body": "Updated only body."
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "post succesfully updated.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Posts"
-                }
-              }
-            }
-          }
-        }
-      },
       "delete": {
         "tags": [
           "Posts"
@@ -319,6 +273,27 @@
             "example": 1
           }
         ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/comments"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/comments": {
+      "get": {
+        "tags": [
+          "comments"
+        ],
+        "operationId": "getAllcomments",
+        "summary": "Get all the comments",
         "responses": {
           "200": {
             "description": "successful operation",
