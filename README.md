@@ -17,8 +17,6 @@
 
 ### Manual steps to create a cypress project
 
-https://github.com/dhana555std/customer-automation/assets/121165761/c5d4e6e4-02a6-4f13-a0da-6bc0a67e36bd
-
 * Create a folder for the project and open it in VScode
 * Open cmd/terminal then execute the below command 
    
@@ -32,6 +30,9 @@ https://github.com/dhana555std/customer-automation/assets/121165761/c5d4e6e4-02a
 
 
 ### Below is the step-by-step video to generate a Cypress basic project
+
+https://github.com/dhana555std/customer-automation/assets/121165761/c5d4e6e4-02a6-4f13-a0da-6bc0a67e36bd
+
 * Create the Cypress project and maintain its structure in the repository before running the pipeline.
 
 * ```reporter-config.json ``` 
