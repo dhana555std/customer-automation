@@ -1,0 +1,34 @@
+{
+    "headers": {
+        "accept": "application/json"
+    },
+    "responseStatusCode": "200",
+    "responseSchema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "postId": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "id": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "pathParam": {
+        "postId": 1
+    }
+}
