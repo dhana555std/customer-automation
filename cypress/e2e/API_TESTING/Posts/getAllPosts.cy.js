@@ -5,7 +5,7 @@ const requestInfo = JSON.parse(
 requestInfo.url = apiBaseURL + requestInfo.url;
 
 describe('fetches the data which is posted', () => {
-    it('200 GET application/json  successful operation', () => {
+    it('200 GET application/json  getAllPosts successful operation', () => {
         cy.fixture('200__getAllPosts').then((fixtureResponse) => {
             requestInfo.headers = fixtureResponse.headers
                 ? fixtureResponse.headers
