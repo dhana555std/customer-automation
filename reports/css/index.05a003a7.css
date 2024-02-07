@@ -1,1 +1,171 @@
-.header{position:sticky!important;top:0;z-index:9}.headerTitle{font-size:18px}.header-logo img{height:30px}.accion-logo img,.footer-logo{height:40px}.single-card{width:33%;padding:12px;transition:all .3s ease-in-out}.single-card:hover{transform:scale(1.03)}.infoCard{height:100%;box-shadow:2px 3px 13px 3px rgba(0,0,0,.56)!important;display:flex!important;flex-direction:column;justify-content:space-between;align-items:end}.infoCard.passed,.v-chip.POST,.v-chip.passed,.v-chip.seriesPassed{background-color:#4aca8f!important}.infoCard.failed,.v-chip.DELETE,.v-chip.failed,.v-chip.seriesFailed{background-color:#f83e3c!important}.infoCard.skipped,.v-chip.skipped{background-color:#989898!important}.infoCard.pending,.v-chip.PUT,.v-chip.pending{background-color:#fca131!important}.v-chip.GET{background-color:#62aefd!important}.v-chip.PATCH{background-color:#51e5c3!important}.cardContent{width:100%}.cardTitle{width:100%;color:#fff;font-weight:700!important;background-color:#0000004d;padding:10px!important;margin-bottom:15px;border-radius:7px 7px 0 0}.cardText{line-height:1.2!important;color:#fff!important;padding-bottom:5px!important}.cardTextDesc,.cardTextTitle{font-family:monospace}.dialogCardText{color:#000!important}.text-shadow{text-shadow:2px 1px 2px #000}@media (max-width:991px){.single-card{width:50%}}@media (max-width:767px){.single-card{width:50%}}@media (max-width:600px){.single-card{width:100%}}@keyframes onCardHover{0%{transform:scale(1)}to{transform:scale(1.03)}}.filterDropdownsCard,.pieChartCard{height:100%;padding:5px}.filterActionBtns{margin:5px;display:flex}.v-label{font-weight:700;color:#000!important}.v-list-item__title{font-size:16px!important;color:#000;line-height:1.5rem!important}.v-chip{margin:1px 1px!important;padding:10px!important}.cards-wrapper{word-wrap:break-word}html{color:#455a64}*{text-transform:none!important;font-family:Roboto,sans-serif}#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.v-main{background-color:#fff!important;padding:20px!important;height:100%}.col{padding:8px!important}div::-webkit-scrollbar{width:7px;height:7px}div::-webkit-scrollbar-corner{background:transparent}div::-webkit-scrollbar-track{background:#e4e4ef;border-radius:7px}div::-webkit-scrollbar-thumb{background:#726d6d;border-radius:7px}div::-webkit-scrollbar-thumb:hover{background:gray}
+.header {
+    position: sticky !important;
+    top: 0;
+    z-index: 9;
+}
+.headerTitle {
+    font-size: 18px;
+}
+.header-logo img {
+    height: 30px;
+}
+.accion-logo img,
+.footer-logo {
+    height: 40px;
+}
+.single-card {
+    width: 33%;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+.single-card:hover {
+    transform: scale(1.03);
+}
+.infoCard {
+    height: 100%;
+    box-shadow: 2px 3px 13px 3px rgba(0, 0, 0, 0.56) !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+.infoCard.passed,
+.v-chip.POST,
+.v-chip.passed,
+.v-chip.seriesPassed {
+    background-color: #4aca8f !important;
+}
+.infoCard.failed,
+.v-chip.DELETE,
+.v-chip.failed,
+.v-chip.seriesFailed {
+    background-color: #f83e3c !important;
+}
+.infoCard.skipped,
+.v-chip.skipped {
+    background-color: #989898 !important;
+}
+.infoCard.pending,
+.v-chip.PUT,
+.v-chip.pending {
+    background-color: #fca131 !important;
+}
+.v-chip.GET {
+    background-color: #62aefd !important;
+}
+.v-chip.PATCH {
+    background-color: #51e5c3 !important;
+}
+.cardContent {
+    width: 100%;
+}
+.cardTitle {
+    width: 100%;
+    color: #fff;
+    font-weight: 700 !important;
+    background-color: #0000004d;
+    padding: 10px !important;
+    margin-bottom: 15px;
+    border-radius: 7px 7px 0 0;
+}
+.cardText {
+    line-height: 1.2 !important;
+    color: #fff !important;
+    padding-bottom: 5px !important;
+}
+.cardTextDesc,
+.cardTextTitle {
+    font-family: monospace;
+}
+.dialogCardText {
+    color: #000 !important;
+}
+.text-shadow {
+    text-shadow: 2px 1px 2px #000;
+}
+@media (max-width: 991px) {
+    .single-card {
+        width: 50%;
+    }
+}
+@media (max-width: 767px) {
+    .single-card {
+        width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .single-card {
+        width: 100%;
+    }
+}
+@keyframes onCardHover {
+    0% {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03);
+    }
+}
+.filterDropdownsCard,
+.pieChartCard {
+    height: 100%;
+    padding: 5px;
+}
+.filterActionBtns {
+    margin: 5px;
+    display: flex;
+}
+.v-label {
+    font-weight: 700;
+    color: #000 !important;
+}
+.v-list-item__title {
+    font-size: 16px !important;
+    color: #000;
+    line-height: 1.5rem !important;
+}
+.v-chip {
+    margin: 1px 1px !important;
+    padding: 10px !important;
+}
+.cards-wrapper {
+    word-wrap: break-word;
+}
+html {
+    color: #455a64;
+}
+* {
+    text-transform: none !important;
+    font-family: Roboto, sans-serif;
+}
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.v-main {
+    background-color: #fff !important;
+    padding: 20px !important;
+    height: 100%;
+}
+.col {
+    padding: 8px !important;
+}
+div::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+div::-webkit-scrollbar-corner {
+    background: transparent;
+}
+div::-webkit-scrollbar-track {
+    background: #e4e4ef;
+    border-radius: 7px;
+}
+div::-webkit-scrollbar-thumb {
+    background: #726d6d;
+    border-radius: 7px;
+}
+div::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
