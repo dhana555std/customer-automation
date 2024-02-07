@@ -1,4 +1,3 @@
-
 {
   "openapi": "3.0.1",
   "info": {
@@ -34,46 +33,45 @@
         ],
         "operationId": "getAllPosts",
         "summary": "fetches the data which is posted",
-"responses": {
-  "200": {
-    "description": "successful operation",
-    "content": {
-      "application/json": {
-        "schema": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "userId": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "id": {
-                "type": "integer",
-                "format": "int32"
-              },
-              "title": {
-                "type": "string"
-              },
-              "body": {
-                "type": "string"
+        "responses": {
+          "200": {
+            "description": "getAllPosts successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "userId": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "id": {
+                        "type": "integer",
+                        "format": "int32"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "body": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "example": [
+                  {
+                    "userId": 1,
+                    "id": 101,
+                    "title": "eson dieod",
+                    "body": "things are working."
+                  }
+                ]
               }
             }
           }
-        },
-        "example": [
-          {
-            "userId": 1,
-            "id": 101,
-            "title": "eson dieod",
-            "body": "things are working."
-          }
-        ]
-      }
-    }
-  }
-}
-
+        }
       },
       "post": {
         "tags": [
@@ -159,6 +157,9 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -222,55 +223,6 @@
                       "type": "string"
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Posts"
-        ],
-        "operationId": "patchUpdatingPost",
-        "summary": "Updates a perticular property of a post.",
-        "parameters": [
-          {
-            "name": "postId",
-            "in": "path",
-            "description": "The ID of the post",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 1
-          }
-        ],
-        "requestBody": {
-          "description": "order placed for purchasing the pet",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Posts"
-              },
-              "examples": {
-                "200": {
-                  "summary": "positive",
-                  "value": {
-                    "body": "Updated only body."
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "post succesfully updated.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Posts"
                 }
               }
             }
@@ -362,32 +314,31 @@
           }
         }
       },
-"comments": {
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "postId": {
-        "type": "integer",
-        "format": "int32"
-      },
-      "id": {
-        "type": "integer",
-        "format": "int32"
-      },
-      "name": {
-        "type": "string"
-      },
-      "email": {
-        "type": "string"
-      },
-      "body": {
-        "type": "string"
+      "comments": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "postId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "id": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            }
+          }
+        }
       }
-    }
-  }
-}
-
     },
     "securitySchemes": {
       "api_key": {
