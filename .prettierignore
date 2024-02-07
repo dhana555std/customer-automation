@@ -7,3 +7,4 @@ commands.js
 e2e.js
 .prettierrc.json
 .prettierignore
+./reports/*
