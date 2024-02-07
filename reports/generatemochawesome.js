@@ -2,7 +2,7 @@ import fs from "fs/promises"; // Import fs with promises support
 import path from "path";
 import { readdir, stat, copyFile, mkdir } from 'fs/promises';
 import { join } from 'path';
-
+import { readFile } from 'fs/promises';
 const filePath = "./mochawesome.json"; // Adjust the path accordingly
 
 const readJsonFile = async (filePath) => {
@@ -15,12 +15,15 @@ const readJsonFile = async (filePath) => {
   }
 };
 
-const generateJsCode = (jsonData) => {
+const generateJsCode = async (jsonData, base64Image) => {
   return `
-(() => {
-    window.mochawesome = ${JSON.stringify(jsonData, null, 2)};
-})();
-`;
+      (() => {
+          window.mochawesome = ${JSON.stringify(jsonData, null, 2)};
+          window.info ={
+            customerLogo:'${base64Image}'
+          }; 
+      })();
+    `;
 };
 
 const writeJsFile = async (filePath, jsCode) => {
@@ -79,6 +82,23 @@ async function copyFolderContents(source, destination) {
   }
 }
 
+async function imageToBase64(imagePath) {
+  try {
+    // Read the image file
+    const imageData = await readFile(imagePath);
+
+    // Convert image data to base64
+    const base64data = Buffer.from(imageData).toString('base64');
+    const mimeType = 'image/jpeg'; // Adjust this according to your image type
+    const base64Image = `data:${mimeType};base64,${base64data}`;
+    console.log(base64Image);
+    return base64Image;
+  } catch (error) {
+    console.error('Error converting image to base64:', error);
+    throw error;
+  }
+}
+
 // Specify the source and destination folders
 const sourceFolder = './reports';
 const outputFolder = `outputs/${await getFormattedCurrentDate()}`; // Updated output folder path
@@ -89,7 +109,9 @@ const outputFolder = `outputs/${await getFormattedCurrentDate()}`; // Updated ou
 (async () => {
   try {
     const jsonData = await readJsonFile(filePath);
-    const jsCode = generateJsCode(jsonData);
+    const imagePath = './logo.jpg';
+    const base64Image = await imageToBase64(imagePath);
+    const jsCode = await generateJsCode(jsonData, base64Image);
     await writeJsFile("./reports/mochawesome.js", jsCode);
     await copyFolderContents(sourceFolder, outputFolder);
   } catch (error) {

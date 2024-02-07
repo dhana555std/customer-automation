@@ -14,6 +14,7 @@ export default defineConfig({
         screenshotOnRunFailure: false,
         env: {
             CYPRESS_BASE_URL: 'https://petstore.swagger.io/v2',
+            fileuploadContentTypes: 'PLACEHOLDER_CONTENT_TYPES',
         },
     },
 });
