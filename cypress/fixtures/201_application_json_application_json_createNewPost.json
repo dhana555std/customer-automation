@@ -1,0 +1,30 @@
+{
+    "headers": {
+        "Content-Type": "application/json",
+        "accept": "application/json"
+    },
+    "payload": {
+        "userId": "1",
+        "title": "new",
+        "body": "this is a new post"
+    },
+    "responseStatusCode": "201",
+    "responseSchema": {
+        "type": "object",
+        "properties": {
+            "userId": {
+                "type": "string"
+            },
+            "id": {
+                "type": "integer",
+                "format": "int32"
+            },
+            "title": {
+                "type": "string"
+            },
+            "body": {
+                "type": "string"
+            }
+        }
+    }
+}
